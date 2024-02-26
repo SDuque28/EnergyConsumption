@@ -1,0 +1,29 @@
+-- Table: public.LogSensor
+
+-- DROP TABLE IF EXISTS public."LogSensor";
+
+CREATE TABLE IF NOT EXISTS public."LogSensor"
+(
+    "Date" date NOT NULL,
+    "Time" time without time zone NOT NULL,
+    "Gap" real NOT NULL,
+    "Grp" real NOT NULL,
+    "Voltage" real NOT NULL,
+    "Gi" real NOT NULL,
+    "Sm1" real NOT NULL,
+    "Sm2" real NOT NULL,
+    "Sm3" real NOT NULL
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public."LogSensor"
+    OWNER to postgres;
+
+REVOKE ALL ON TABLE public."LogSensor" FROM PUBLIC;
+
+GRANT SELECT ON TABLE public."LogSensor" TO PUBLIC;
+
+GRANT ALL ON TABLE public."LogSensor" TO postgres;
+
+COPY LogSensor FROM 'C:\Users\Santiago D\Documents\Universidad\2024-1\Procesos 2\Proyecto\EnergyConsumption.csv' DELIMITER ',' CSV HEADER;
