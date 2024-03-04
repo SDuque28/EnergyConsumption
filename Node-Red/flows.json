@@ -8,6 +8,256 @@
         "env": []
     },
     {
+        "id": "9637394d2b7e86d8",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "e6aca9683aa7c3ae",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0d5673",
+                "baseFont": "Palatino Linotype,Palatino,Book Antiqua,serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#041f20",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0d5673",
+                    "edited": true
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0d5673",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1589b8",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0d5673",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "Palatino Linotype,Palatino,Book Antiqua,serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "ba3d2f007efc9ec3",
+        "type": "postgreSQLConfig",
+        "name": "PostgresServer",
+        "host": "127.0.0.1",
+        "hostFieldType": "str",
+        "port": "5432",
+        "portFieldType": "num",
+        "database": "EnergyConsumption",
+        "databaseFieldType": "str",
+        "ssl": "false",
+        "sslFieldType": "bool",
+        "applicationName": "",
+        "applicationNameType": "str",
+        "max": "10",
+        "maxFieldType": "num",
+        "idle": "1000",
+        "idleFieldType": "num",
+        "connectionTimeout": "10000",
+        "connectionTimeoutFieldType": "num",
+        "user": "postgres",
+        "userFieldType": "str",
+        "password": "KinKon28",
+        "passwordFieldType": "str"
+    },
+    {
+        "id": "b9d366f18ff7ae74",
+        "type": "ui_group",
+        "name": "Busqueda por Fecha",
+        "tab": "ffba43d73860d25d",
+        "order": 1,
+        "disp": false,
+        "width": 24,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "ffba43d73860d25d",
+        "type": "ui_tab",
+        "name": "Pagina 2",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "8b98e8959a6c30e0",
+        "type": "ui_group",
+        "name": "Consumo ",
+        "tab": "eefbea6e8dbb0b17",
+        "order": 2,
+        "disp": false,
+        "width": 12,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "eefbea6e8dbb0b17",
+        "type": "ui_tab",
+        "name": "Pagina 1",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "c2b84d8c0b2973e9",
+        "type": "ui_spacer",
+        "z": "2a2cc906a03e0859",
+        "name": "spacer",
+        "group": "b9d366f18ff7ae74",
+        "order": 1,
+        "width": 10,
+        "height": 1
+    },
+    {
+        "id": "38fa1059d245e539",
+        "type": "ui_spacer",
+        "z": "2a2cc906a03e0859",
+        "name": "spacer",
+        "group": "b9d366f18ff7ae74",
+        "order": 3,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "5c9fde6ef95db013",
+        "type": "ui_spacer",
+        "z": "2a2cc906a03e0859",
+        "name": "spacer",
+        "group": "b9d366f18ff7ae74",
+        "order": 4,
+        "width": 7,
+        "height": 1
+    },
+    {
+        "id": "25acb4852e92d81f",
+        "type": "ui_spacer",
+        "z": "2a2cc906a03e0859",
+        "name": "spacer",
+        "group": "b9d366f18ff7ae74",
+        "order": 7,
+        "width": 7,
+        "height": 1
+    },
+    {
+        "id": "62e9c2e2f3109bc9",
+        "type": "ui_spacer",
+        "z": "2a2cc906a03e0859",
+        "name": "spacer",
+        "group": "8b98e8959a6c30e0",
+        "order": 2,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "795f31039f9152d5",
+        "type": "ui_spacer",
+        "z": "2a2cc906a03e0859",
+        "name": "spacer",
+        "group": "8b98e8959a6c30e0",
+        "order": 4,
+        "width": 3,
+        "height": 1
+    },
+    {
         "id": "3d159d577c8cee8b",
         "type": "mqtt in",
         "z": "2a2cc906a03e0859",
@@ -245,7 +495,6 @@
         "y": 280,
         "wires": [
             [
-                "4abe5f17d6580312",
                 "72933801a449347b"
             ]
         ]
@@ -255,16 +504,16 @@
         "type": "debug",
         "z": "2a2cc906a03e0859",
         "name": "debug 9",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "params",
+        "complete": "payload",
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 720,
-        "y": 260,
+        "x": 1140,
+        "y": 180,
         "wires": []
     },
     {
@@ -274,7 +523,7 @@
         "name": "",
         "group": "b9d366f18ff7ae74",
         "order": 8,
-        "width": 10,
+        "width": 12,
         "height": 5,
         "label": "Global Active Power",
         "chartType": "line",
@@ -368,7 +617,8 @@
         "y": 240,
         "wires": [
             [
-                "be6c970e8e961511"
+                "be6c970e8e961511",
+                "4abe5f17d6580312"
             ]
         ]
     },
@@ -379,7 +629,7 @@
         "name": "",
         "group": "b9d366f18ff7ae74",
         "order": 11,
-        "width": 10,
+        "width": 12,
         "height": 5,
         "label": "Global Reactive Power",
         "chartType": "line",
@@ -423,7 +673,7 @@
         "name": "",
         "group": "b9d366f18ff7ae74",
         "order": 9,
-        "width": 10,
+        "width": 12,
         "height": 5,
         "label": "Voltage",
         "chartType": "line",
@@ -487,7 +737,7 @@
         "name": "",
         "group": "b9d366f18ff7ae74",
         "order": 10,
-        "width": 10,
+        "width": 12,
         "height": 5,
         "label": "Global Intensity",
         "chartType": "line",
@@ -545,115 +795,291 @@
         ]
     },
     {
-        "id": "7b3540b114851989",
-        "type": "ui_spacer",
+        "id": "e44ea715d21ae12d",
+        "type": "mqtt in",
         "z": "2a2cc906a03e0859",
-        "name": "spacer",
-        "group": "b9d366f18ff7ae74",
-        "order": 1,
-        "width": 8,
-        "height": 1
-    },
-    {
-        "id": "1f69714e0baa2b43",
-        "type": "ui_spacer",
-        "z": "2a2cc906a03e0859",
-        "name": "spacer",
-        "group": "b9d366f18ff7ae74",
-        "order": 3,
-        "width": 3,
-        "height": 1
-    },
-    {
-        "id": "2bb368df08cb0f35",
-        "type": "ui_spacer",
-        "z": "2a2cc906a03e0859",
-        "name": "spacer",
-        "group": "b9d366f18ff7ae74",
-        "order": 4,
-        "width": 5,
-        "height": 1
-    },
-    {
-        "id": "a31b4be310d24cdd",
-        "type": "ui_spacer",
-        "z": "2a2cc906a03e0859",
-        "name": "spacer",
-        "group": "b9d366f18ff7ae74",
-        "order": 7,
-        "width": 5,
-        "height": 1
-    },
-    {
-        "id": "9637394d2b7e86d8",
-        "type": "mqtt-broker",
         "name": "",
-        "broker": "localhost",
-        "port": "1883",
-        "clientid": "",
-        "autoConnect": true,
-        "usetls": false,
-        "protocolVersion": "4",
-        "keepalive": "60",
-        "cleansession": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthPayload": "",
-        "birthMsg": {},
-        "closeTopic": "",
-        "closeQos": "0",
-        "closePayload": "",
-        "closeMsg": {},
-        "willTopic": "",
-        "willQos": "0",
-        "willPayload": "",
-        "willMsg": {},
-        "userProps": "",
-        "sessionExpiry": ""
+        "topic": "val2",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "9637394d2b7e86d8",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 410,
+        "y": 500,
+        "wires": [
+            [
+                "dd08f5b69dd13ef2"
+            ]
+        ]
     },
     {
-        "id": "ba3d2f007efc9ec3",
-        "type": "postgreSQLConfig",
-        "name": "PostgresServer",
-        "host": "127.0.0.1",
-        "hostFieldType": "str",
-        "port": "5432",
-        "portFieldType": "num",
-        "database": "EnergyConsumption",
-        "databaseFieldType": "str",
-        "ssl": "false",
-        "sslFieldType": "bool",
-        "applicationName": "",
-        "applicationNameType": "str",
-        "max": "10",
-        "maxFieldType": "num",
-        "idle": "1000",
-        "idleFieldType": "num",
-        "connectionTimeout": "10000",
-        "connectionTimeoutFieldType": "num",
-        "user": "postgres",
-        "userFieldType": "str",
-        "password": "KinKon28",
-        "passwordFieldType": "str"
-    },
-    {
-        "id": "b9d366f18ff7ae74",
-        "type": "ui_group",
-        "name": "Busqueda por Fecha",
-        "tab": "ffba43d73860d25d",
+        "id": "255bd51e4788cfa7",
+        "type": "ui_chart",
+        "z": "2a2cc906a03e0859",
+        "name": "",
+        "group": "8b98e8959a6c30e0",
         "order": 1,
-        "disp": false,
-        "width": "20",
-        "collapse": false,
-        "className": ""
+        "width": 0,
+        "height": 0,
+        "label": "Promedio por Hora",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "bezier",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 830,
+        "y": 500,
+        "wires": [
+            []
+        ]
     },
     {
-        "id": "ffba43d73860d25d",
-        "type": "ui_tab",
-        "name": "Level",
-        "icon": "dashboard",
+        "id": "dd08f5b69dd13ef2",
+        "type": "function",
+        "z": "2a2cc906a03e0859",
+        "name": "function 19",
+        "func": "msg.payload = JSON.parse(msg.payload);\nmsg.payload = [msg.payload]\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 500,
+        "wires": [
+            [
+                "255bd51e4788cfa7"
+            ]
+        ]
+    },
+    {
+        "id": "f7d50bd0514b8cab",
+        "type": "file in",
+        "z": "2a2cc906a03e0859",
+        "name": "",
+        "filename": "C:\\Users\\Santiago D\\Documents\\Universidad\\2024-1\\Procesos 2\\Proyecto\\JSON\\payload.json",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": true,
+        "x": 475,
+        "y": 560,
+        "wires": [
+            [
+                "dd08f5b69dd13ef2",
+                "f6e54e855d7d1beb",
+                "1ce7fd498f204e16",
+                "3a4d8ca0e4986e1e"
+            ]
+        ],
+        "inputLabels": [
+            "Data.JSON"
+        ],
+        "outputLabels": [
+            "Data.JSON"
+        ],
+        "l": false
+    },
+    {
+        "id": "1c5583ebf18d6816",
+        "type": "inject",
+        "z": "2a2cc906a03e0859",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 360,
+        "y": 560,
+        "wires": [
+            [
+                "f7d50bd0514b8cab"
+            ]
+        ]
+    },
+    {
+        "id": "eda5c94f373802ce",
+        "type": "ui_text",
+        "z": "2a2cc906a03e0859",
+        "group": "8b98e8959a6c30e0",
         "order": 3,
-        "disabled": false,
-        "hidden": false
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": " Horas de Mayor Consumo:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": true,
+        "font": "",
+        "fontSize": "22",
+        "color": "#000000",
+        "x": 580,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "f6e54e855d7d1beb",
+        "type": "function",
+        "z": "2a2cc906a03e0859",
+        "name": "function 20",
+        "func": "msg.payload = JSON.parse(msg.payload);\nmsg.payload = msg.payload.maxValues[0];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 540,
+        "wires": [
+            [
+                "727583b25dde3406"
+            ]
+        ]
+    },
+    {
+        "id": "727583b25dde3406",
+        "type": "ui_text",
+        "z": "2a2cc906a03e0859",
+        "group": "8b98e8959a6c30e0",
+        "order": 5,
+        "width": 4,
+        "height": 1,
+        "name": "",
+        "label": "Submeter1: ",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "",
+        "style": true,
+        "font": "",
+        "fontSize": "20",
+        "color": "#000000",
+        "x": 810,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "1ce7fd498f204e16",
+        "type": "function",
+        "z": "2a2cc906a03e0859",
+        "name": "function 21",
+        "func": "msg.payload = JSON.parse(msg.payload);\nmsg.payload = msg.payload.maxValues[1];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 580,
+        "wires": [
+            [
+                "ebe0ad7c66182aae"
+            ]
+        ]
+    },
+    {
+        "id": "ebe0ad7c66182aae",
+        "type": "ui_text",
+        "z": "2a2cc906a03e0859",
+        "group": "8b98e8959a6c30e0",
+        "order": 6,
+        "width": 4,
+        "height": 1,
+        "name": "",
+        "label": "Submeter2: ",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "",
+        "style": true,
+        "font": "",
+        "fontSize": "20",
+        "color": "#000000",
+        "x": 810,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "3a4d8ca0e4986e1e",
+        "type": "function",
+        "z": "2a2cc906a03e0859",
+        "name": "function 22",
+        "func": "msg.payload = JSON.parse(msg.payload);\nmsg.payload = msg.payload.maxValues[2];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 620,
+        "wires": [
+            [
+                "ba951ecd7de6a002"
+            ]
+        ]
+    },
+    {
+        "id": "ba951ecd7de6a002",
+        "type": "ui_text",
+        "z": "2a2cc906a03e0859",
+        "group": "8b98e8959a6c30e0",
+        "order": 7,
+        "width": 4,
+        "height": 1,
+        "name": "",
+        "label": "Submeter3: ",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "",
+        "style": true,
+        "font": "",
+        "fontSize": "20",
+        "color": "#000000",
+        "x": 810,
+        "y": 620,
+        "wires": []
     }
 ]
