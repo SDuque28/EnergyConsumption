@@ -1,5 +1,3 @@
----
-
 # Análisis de Datos de Consumo Energético
 
 Este proyecto tiene como objetivo realizar un análisis exhaustivo de los datos de consumo energético utilizando tecnologías como Node-RED, Mosquitto MQTT, Python para análisis de datos y PostgreSQL como base de datos.
@@ -33,5 +31,3 @@ Actualmente, este proyecto es mantenido por Santiago Duque y no se aceptan contr
 ## Licencia
 
 Este proyecto está bajo la licencia [MIT](LICENSE).
-
----
