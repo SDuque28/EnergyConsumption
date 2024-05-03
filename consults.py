@@ -28,6 +28,19 @@ resultados = cursor.fetchall()
 # Convertir los resultados a un DataFrame de Pandas
 df = pd.DataFrame(resultados, columns=values)
 
+descripcion = df.describe()
+mean =  ""; min = ""; max = ""; std = ""
+for index in data[0]:
+    mean1 = round(descripcion.loc['mean', index],4)
+    min1  = round(descripcion.loc['min', index],4)
+    max1  = round(descripcion.loc['max', index],4)
+    std1  = round(descripcion.loc['std', index],4)
+    
+    mean = mean + index + " = " + f"{mean1}" + "\n"
+    min  = min  + index + " = " + f"{min1}"  + "\n"
+    max  = max  + index + " = " + f"{max1}"  + "\n"
+    std  = std  + index + " = " + f"{std1}"  + "\n"
+
 def calcular_promedio_por_hora(df, columnas):
     # Convertir la columna "Date" a formato de fecha
     df['Date'] = pd.to_datetime(df['Date'])
@@ -107,6 +120,8 @@ def calcular_promedio_por_mes(df, columnas):
 
     return promedio_por_mes
 
+payload = {}
+
 if number == 1: 
     promedio_por_hora = calcular_promedio_por_hora(df, data[0])
 
@@ -116,10 +131,6 @@ if number == 1:
     payload = {"labels": horas,
                "data": promedio_por_hora,
                "series":data[0] }
-
-    # Escribir los datos en el archivo JSON
-    with open(route, "w") as json_file:
-        json.dump(payload, json_file, indent=4)
         
 elif number == 7:
     promedio_por_semana = calcular_promedio_por_semana(df, data[0])
@@ -130,10 +141,6 @@ elif number == 7:
     payload = {"labels": dias,
                "data": promedio_por_semana,
                "series":data[0] }
-
-    # Escribir los datos en el archivo JSON
-    with open(route, "w") as json_file:
-        json.dump(payload, json_file, indent=4)
         
 elif number == 30:
     promedio_por_mes = calcular_promedio_por_mes(df, data[0])
@@ -145,9 +152,14 @@ elif number == 30:
                "data": promedio_por_mes,
                "series":data[0]}
 
-    # Escribir los datos en el archivo JSON
-    with open(route, "w") as json_file:
-        json.dump(payload, json_file, indent=4)
+payload["Promedio"] = mean
+payload["Max"] = max
+payload["Min"] = min
+payload["STD"] = std
+
+# Escribir los datos en el archivo JSON
+with open(route, "w") as json_file:
+    json.dump(payload, json_file, indent=4)
 
 conexion.close()
 cursor.close()
