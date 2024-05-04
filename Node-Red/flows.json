@@ -20,7 +20,7 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 450,
+        "x": 150,
         "y": 180,
         "wires": [
             [
@@ -38,7 +38,7 @@
         "split": false,
         "rowsPerMsg": 1,
         "outputs": 1,
-        "x": 870,
+        "x": 450,
         "y": 180,
         "wires": [
             []
@@ -56,7 +56,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 650,
+        "x": 290,
         "y": 180,
         "wires": [
             [
@@ -548,7 +548,7 @@
         "useDifferentColor": false,
         "className": "",
         "x": 610,
-        "y": 580,
+        "y": 660,
         "wires": [
             []
         ]
@@ -567,7 +567,7 @@
         "encoding": "none",
         "allProps": true,
         "x": 275,
-        "y": 640,
+        "y": 720,
         "wires": [
             [
                 "f6e54e855d7d1beb"
@@ -594,7 +594,7 @@
         "onceDelay": 0.1,
         "topic": "",
         "x": 150,
-        "y": 640,
+        "y": 720,
         "wires": [
             [
                 "f7d50bd0514b8cab"
@@ -620,7 +620,7 @@
         "fontSize": "22",
         "color": "#000000",
         "x": 220,
-        "y": 600,
+        "y": 680,
         "wires": []
     },
     {
@@ -637,7 +637,7 @@
         "finalize": "",
         "libs": [],
         "x": 410,
-        "y": 640,
+        "y": 720,
         "wires": [
             [
                 "727583b25dde3406",
@@ -666,7 +666,7 @@
         "fontSize": "20",
         "color": "#000000",
         "x": 590,
-        "y": 620,
+        "y": 700,
         "wires": []
     },
     {
@@ -688,7 +688,7 @@
         "fontSize": "20",
         "color": "#000000",
         "x": 590,
-        "y": 660,
+        "y": 740,
         "wires": []
     },
     {
@@ -710,7 +710,7 @@
         "fontSize": "20",
         "color": "#000000",
         "x": 590,
-        "y": 700,
+        "y": 780,
         "wires": []
     },
     {
@@ -769,7 +769,7 @@
         "topicType": "msg",
         "className": "",
         "x": 420,
-        "y": 500,
+        "y": 440,
         "wires": [
             [
                 "39f08db9289a80cd"
@@ -812,7 +812,7 @@
         "topicType": "msg",
         "className": "",
         "x": 430,
-        "y": 540,
+        "y": 480,
         "wires": [
             [
                 "39f08db9289a80cd"
@@ -828,7 +828,7 @@
         "width": 9,
         "height": 1,
         "name": "",
-        "label": "Rango de Fechas a Analisar",
+        "label": "Rango de Fechas a Analizar",
         "format": "{{msg.payload}}",
         "layout": "row-left",
         "className": "",
@@ -855,7 +855,7 @@
         "topicType": "str",
         "className": "",
         "x": 170,
-        "y": 440,
+        "y": 500,
         "wires": [
             [
                 "6727cfd494a8d1a2"
@@ -877,7 +877,7 @@
         "topicType": "str",
         "className": "",
         "x": 170,
-        "y": 480,
+        "y": 540,
         "wires": [
             [
                 "6727cfd494a8d1a2"
@@ -905,7 +905,7 @@
         "reduceInitType": "",
         "reduceFixup": "",
         "x": 310,
-        "y": 460,
+        "y": 520,
         "wires": [
             [
                 "29bc6a9518622bed"
@@ -916,6 +916,7 @@
         "id": "39f08db9289a80cd",
         "type": "join",
         "z": "2a2cc906a03e0859",
+        "d": true,
         "name": "",
         "mode": "custom",
         "build": "array",
@@ -933,7 +934,7 @@
         "reduceInitType": "",
         "reduceFixup": "",
         "x": 610,
-        "y": 500,
+        "y": 480,
         "wires": [
             [
                 "a143b6bc48a2f1a6"
@@ -953,10 +954,11 @@
         "finalize": "",
         "libs": [],
         "x": 450,
-        "y": 460,
+        "y": 520,
         "wires": [
             [
-                "39f08db9289a80cd"
+                "39f08db9289a80cd",
+                "2b82f3146b615aa2"
             ]
         ]
     },
@@ -990,7 +992,7 @@
         "finalize": "",
         "libs": [],
         "x": 770,
-        "y": 500,
+        "y": 480,
         "wires": [
             [
                 "4cfde982be02f1f8",
@@ -1007,7 +1009,7 @@
         "width": 9,
         "height": 1,
         "name": "",
-        "label": "Variables y Tipo de Analisis",
+        "label": "Variables y Tipo de Análisis",
         "format": "{{msg.payload}}",
         "layout": "row-left",
         "className": "",
@@ -1015,7 +1017,7 @@
         "font": "",
         "fontSize": "20",
         "color": "#000000",
-        "x": 500,
+        "x": 480,
         "y": 400,
         "wires": []
     },
@@ -1035,7 +1037,8 @@
         "y": 520,
         "wires": [
             [
-                "23fdc2f70a0acf91"
+                "23fdc2f70a0acf91",
+                "a673a460f76c181b"
             ]
         ],
         "inputLabels": [
@@ -1084,8 +1087,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 1330,
-        "y": 520,
+        "x": 1370,
+        "y": 500,
         "wires": [
             []
         ]
@@ -1106,12 +1109,12 @@
         ],
         "repeat": "",
         "crontab": "",
-        "once": false,
+        "once": true,
         "onceDelay": 0.1,
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 960,
+        "x": 950,
         "y": 540,
         "wires": [
             [
@@ -1131,8 +1134,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1190,
-        "y": 520,
+        "x": 1210,
+        "y": 500,
         "wires": [
             [
                 "1f1fd754e9566d2d"
@@ -1156,7 +1159,7 @@
         "font": "",
         "fontSize": "22",
         "color": "#000000",
-        "x": 1150,
+        "x": 1210,
         "y": 460,
         "wires": []
     },
@@ -1178,6 +1181,549 @@
             [
                 "f0e0e95fec0b3342"
             ]
+        ]
+    },
+    {
+        "id": "409f91597b31c334",
+        "type": "ui_text",
+        "z": "2a2cc906a03e0859",
+        "group": "264021cecb64e1e7",
+        "order": 3,
+        "width": 4,
+        "height": 4,
+        "name": "",
+        "label": "Promedios",
+        "format": "<p>{{value}}</p>",
+        "layout": "col-center",
+        "className": "top-left-align",
+        "style": true,
+        "font": "Lucida Sans Unicode,Lucida Grande,sans-serif",
+        "fontSize": "16",
+        "color": "#000000",
+        "x": 1550,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "0dbd1e190e4a2602",
+        "type": "function",
+        "z": "2a2cc906a03e0859",
+        "name": "function 29",
+        "func": "msg.payload = msg.payload.Promedio\nmsg.payload = msg.payload.replace(/\\n/g, '<br>');\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1390,
+        "y": 540,
+        "wires": [
+            [
+                "409f91597b31c334"
+            ]
+        ]
+    },
+    {
+        "id": "a673a460f76c181b",
+        "type": "function",
+        "z": "2a2cc906a03e0859",
+        "name": "function 30",
+        "func": "msg.payload = JSON.parse(msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1210,
+        "y": 600,
+        "wires": [
+            [
+                "0dbd1e190e4a2602",
+                "d6a7bb584ec773b3",
+                "c1f645578cdd15a6",
+                "a556952987d8462c"
+            ]
+        ]
+    },
+    {
+        "id": "d6a7bb584ec773b3",
+        "type": "function",
+        "z": "2a2cc906a03e0859",
+        "name": "function 31",
+        "func": "msg.payload = msg.payload.Max\nmsg.payload = msg.payload.replace(/\\n/g, '<br>');\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1390,
+        "y": 580,
+        "wires": [
+            [
+                "7fcc5048c68927d9"
+            ]
+        ]
+    },
+    {
+        "id": "c1f645578cdd15a6",
+        "type": "function",
+        "z": "2a2cc906a03e0859",
+        "name": "function 32",
+        "func": "msg.payload = msg.payload.Min\nmsg.payload = msg.payload.replace(/\\n/g, '<br>');\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1390,
+        "y": 620,
+        "wires": [
+            [
+                "22cded997c3e85e5"
+            ]
+        ]
+    },
+    {
+        "id": "7fcc5048c68927d9",
+        "type": "ui_text",
+        "z": "2a2cc906a03e0859",
+        "group": "264021cecb64e1e7",
+        "order": 1,
+        "width": 4,
+        "height": 4,
+        "name": "",
+        "label": "Maximos",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": true,
+        "font": "Lucida Sans Unicode,Lucida Grande,sans-serif",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1540,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "22cded997c3e85e5",
+        "type": "ui_text",
+        "z": "2a2cc906a03e0859",
+        "group": "264021cecb64e1e7",
+        "order": 2,
+        "width": 4,
+        "height": 4,
+        "name": "",
+        "label": "Minimos",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": true,
+        "font": "Lucida Sans Unicode,Lucida Grande,sans-serif",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1540,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "a556952987d8462c",
+        "type": "function",
+        "z": "2a2cc906a03e0859",
+        "name": "function 33",
+        "func": "msg.payload = msg.payload.STD\nmsg.payload = msg.payload.replace(/\\n/g, '<br>');\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1390,
+        "y": 660,
+        "wires": [
+            [
+                "1b6a34b8b6c86969"
+            ]
+        ]
+    },
+    {
+        "id": "1b6a34b8b6c86969",
+        "type": "ui_text",
+        "z": "2a2cc906a03e0859",
+        "group": "264021cecb64e1e7",
+        "order": 4,
+        "width": 4,
+        "height": 4,
+        "name": "",
+        "label": "Desviación Est.",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": true,
+        "font": "Lucida Sans Unicode,Lucida Grande,sans-serif",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1560,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "062dd2906fa8caf9",
+        "type": "mqtt in",
+        "z": "2a2cc906a03e0859",
+        "name": "",
+        "topic": "val2",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "9637394d2b7e86d8",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 590,
+        "y": 180,
+        "wires": [
+            [
+                "49fe0432794547d9",
+                "3c824960866394cd"
+            ]
+        ]
+    },
+    {
+        "id": "49fe0432794547d9",
+        "type": "debug",
+        "z": "2a2cc906a03e0859",
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "3c824960866394cd",
+        "type": "ui_chart",
+        "z": "2a2cc906a03e0859",
+        "d": true,
+        "name": "",
+        "group": "b9d366f18ff7ae74",
+        "order": 11,
+        "width": 0,
+        "height": 0,
+        "label": "chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 730,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2b82f3146b615aa2",
+        "type": "pythonshell in",
+        "z": "2a2cc906a03e0859",
+        "name": "pychart",
+        "pyfile": "C:\\Users\\Santiago D\\Documents\\Universidad\\2024-1\\Procesos 2\\Proyecto\\pieChart.py",
+        "virtualenv": "",
+        "continuous": false,
+        "stdInData": false,
+        "x": 640,
+        "y": 560,
+        "wires": [
+            [
+                "25d85fca71276a18",
+                "ab347ad434617276",
+                "8ebfea2bd9707ebe",
+                "1f7e94e4532c65fa"
+            ]
+        ]
+    },
+    {
+        "id": "25d85fca71276a18",
+        "type": "file in",
+        "z": "2a2cc906a03e0859",
+        "name": "",
+        "filename": "C:\\Users\\Santiago D\\Documents\\Universidad\\2024-1\\Procesos 2\\Proyecto\\JSON\\pie1.json",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 785,
+        "y": 560,
+        "wires": [
+            [
+                "663662f1d2503934"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "ab347ad434617276",
+        "type": "file in",
+        "z": "2a2cc906a03e0859",
+        "name": "",
+        "filename": "C:\\Users\\Santiago D\\Documents\\Universidad\\2024-1\\Procesos 2\\Proyecto\\JSON\\pie2.json",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 785,
+        "y": 600,
+        "wires": [
+            [
+                "cd47d4850f3930c6"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "8ebfea2bd9707ebe",
+        "type": "file in",
+        "z": "2a2cc906a03e0859",
+        "name": "",
+        "filename": "C:\\Users\\Santiago D\\Documents\\Universidad\\2024-1\\Procesos 2\\Proyecto\\JSON\\pie3.json",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 785,
+        "y": 640,
+        "wires": [
+            [
+                "419d3b9364015d33"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "663662f1d2503934",
+        "type": "function",
+        "z": "2a2cc906a03e0859",
+        "name": "function 34",
+        "func": "msg.payload = JSON.parse(msg.payload);\nmsg.topic = 1\n//msg.payload = [msg.payload]\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 950,
+        "y": 580,
+        "wires": [
+            [
+                "09284fe9cd7e617b"
+            ]
+        ]
+    },
+    {
+        "id": "cd47d4850f3930c6",
+        "type": "function",
+        "z": "2a2cc906a03e0859",
+        "name": "function 35",
+        "func": "msg.payload = JSON.parse(msg.payload);\nmsg.topic = 2\n//msg.payload = [msg.payload]\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 950,
+        "y": 620,
+        "wires": [
+            [
+                "bcac2dc869eddd97"
+            ]
+        ]
+    },
+    {
+        "id": "419d3b9364015d33",
+        "type": "function",
+        "z": "2a2cc906a03e0859",
+        "name": "function 36",
+        "func": "msg.payload = JSON.parse(msg.payload);\nmsg.topic = 3\n//msg.payload = [msg.payload]\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 950,
+        "y": 660,
+        "wires": [
+            [
+                "f18906809e0052cf"
+            ]
+        ]
+    },
+    {
+        "id": "b2f2c593a767d881",
+        "type": "inject",
+        "z": "2a2cc906a03e0859",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 630,
+        "y": 620,
+        "wires": [
+            [
+                "25d85fca71276a18",
+                "ab347ad434617276",
+                "8ebfea2bd9707ebe",
+                "1f7e94e4532c65fa"
+            ]
+        ]
+    },
+    {
+        "id": "09284fe9cd7e617b",
+        "type": "ui_template",
+        "z": "2a2cc906a03e0859",
+        "group": "8c7fce8cfeef3eb1",
+        "name": "Zona 1 vs Zona 2",
+        "order": 1,
+        "width": 8,
+        "height": 8,
+        "format": "<!-- Nodo 1 -->\n<div style=\"width: 100%; height: 400px;\">\n    <canvas id=\"myPieChart1\"></canvas>\n</div>\n\n<script>\n    // Obtener el contexto del canvas\n    var ctx1 = document.getElementById('myPieChart1').getContext('2d');\n    var myPieChart1;\n\n    // Función para actualizar el gráfico con nuevos datos\n    function updateChart1(payload) {\n        try {\n            // Extraer datos relevantes del payload\n            var labels = payload.labels || [];\n            var data = payload.data || [];\n\n            // Crear objeto de datos para el gráfico\n            var chartData = {\n                labels: labels,\n                datasets: [{\n                    data: data,\n                    backgroundColor: [\n                        'rgb(206, 44, 47)', // Color para la primera serie\n                        'rgb(250,132,23)', // Color para la segunda serie\n                        'rgb(49, 154, 250)', // Color para la tercera serie (y así sucesivamente)\n                    ]\n                }]\n            };\n\n            // Destruir el gráfico anterior (si existe) y crear uno nuevo con los datos actualizados\n            if (myPieChart1) {\n                myPieChart1.destroy();\n            }\n\n            myPieChart1 = new Chart(ctx1, {\n                type: 'pie',\n                data: chartData,\n                options: {\n                    responsive: true,\n                    maintainAspectRatio: false,\n                    title: {\n                        display: true,\n                        text: 'Zona 1 vs Zona 2', // Título del gráfico\n                        fontSize: 24\n                        },\n                    legend: {\n                        display: true,\n                        position: 'bottom', // Posición de la leyenda (abajo)\n                        labels: {\n                            fontSize: 14\n                        }\n                    }\n                }\n            });\n        } catch (error) {\n            console.error('Error al procesar el payload JSON:', error);\n        }\n    }\n\n    // Llamar a la función de actualización del gráfico cuando se reciba un nuevo mensaje\n    scope.$watch('msg.payload', function(newVal, oldVal) {\n        if (newVal !== undefined) {\n            updateChart1(newVal);\n        }\n    });\n</script>\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1065,
+        "y": 580,
+        "wires": [
+            []
+        ],
+        "l": false
+    },
+    {
+        "id": "bcac2dc869eddd97",
+        "type": "ui_template",
+        "z": "2a2cc906a03e0859",
+        "group": "8c7fce8cfeef3eb1",
+        "name": "Zona 1 vs Zona 3",
+        "order": 2,
+        "width": 8,
+        "height": 8,
+        "format": "<!-- Nodo 2 -->\n<div style=\"width: 100%; height: 400px;\">\n    <canvas id=\"myPieChart2\"></canvas>\n</div>\n\n<script>\n    // Obtener el contexto del canvas\n    var ctx2 = document.getElementById('myPieChart2').getContext('2d');\n    var myPieChart2;\n\n    // Función para actualizar el gráfico con nuevos datos\n    function updateChart2(payload) {\n        try {\n            // Extraer datos relevantes del payload\n            var labels = payload.labels || [];\n            var data = payload.data || [];\n\n            // Crear objeto de datos para el gráfico\n            var chartData = {\n                labels: labels,\n                datasets: [{\n                    data: data,\n                    backgroundColor: [\n                        'rgb(206, 44, 47)', // Color para la primera serie\n                        'rgb(250,132,23)', // Color para la segunda serie\n                        'rgb(49, 154, 250)',   // Color para la tercera serie (y así sucesivamente)\n                    ]\n                }]\n            };\n\n            // Destruir el gráfico anterior (si existe) y crear uno nuevo con los datos actualizados\n            if (myPieChart2) {\n                myPieChart2.destroy();\n            }\n\n            myPieChart2 = new Chart(ctx2, {\n                type: 'pie',\n                data: chartData,\n                options: {\n                    responsive: true,\n                    maintainAspectRatio: false,\n                    title: {\n                        display: true,\n                        text: 'Zona 1 vs Zona 3', // Título del gráfico\n                        fontSize: 24\n                    },\n                    legend: {\n                        display: true,\n                        position: 'bottom', // Posición de la leyenda (abajo)\n                        labels: {\n                            fontSize: 14\n                        }\n                    }\n                }\n            });\n        } catch (error) {\n            console.error('Error al procesar el payload JSON:', error);\n        }\n    }\n\n    // Llamar a la función de actualización del gráfico cuando se reciba un nuevo mensaje\n    scope.$watch('msg.payload', function(newVal, oldVal) {\n        if (newVal !== undefined) {\n            updateChart2(newVal);\n        }\n    });\n</script>\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1065,
+        "y": 620,
+        "wires": [
+            []
+        ],
+        "l": false
+    },
+    {
+        "id": "f18906809e0052cf",
+        "type": "ui_template",
+        "z": "2a2cc906a03e0859",
+        "group": "8c7fce8cfeef3eb1",
+        "name": "Zona 2 vs Zona 3",
+        "order": 3,
+        "width": 8,
+        "height": 8,
+        "format": "<!-- Nodo 3 -->\n<div style=\"width: 100%; height: 400px;\">\n    <canvas id=\"myPieChart3\"></canvas>\n</div>\n\n<script>\n    // Obtener el contexto del canvas\n    var ctx3 = document.getElementById('myPieChart3').getContext('2d');\n    var myPieChart3;\n\n    // Función para actualizar el gráfico con nuevos datos\n    function updateChart3(payload) {\n        try {\n            // Extraer datos relevantes del payload\n            var labels = payload.labels || [];\n            var data = payload.data || [];\n\n            // Crear objeto de datos para el gráfico\n            var chartData = {\n                labels: labels,\n                datasets: [{\n                    data: data,\n                    backgroundColor: [\n                        'rgb(206, 44,  47)', // Color para la primera serie\n                        'rgb(250,132,23)', // Color para la segunda serie\n                        'rgb(49, 154, 250)',   // Color para la tercera serie (y así sucesivamente)\n                    ]\n                }]\n            };\n\n            // Destruir el gráfico anterior (si existe) y crear uno nuevo con los datos actualizados\n            if (myPieChart3) {\n                myPieChart3.destroy();\n            }\n\n            myPieChart3 = new Chart(ctx3, {\n                type: 'pie',\n                data: chartData,\n                options: {\n                    responsive: true,\n                    maintainAspectRatio: false,\n                    title: {\n                        display: true,\n                        text: 'Zona 2 vs Zona 3', // Título del gráfico\n                        fontSize: 24\n                    },\n                    legend: {\n                        display: true,\n                        position: 'bottom', // Posición de la leyenda (abajo)\n                        labels: {\n                            fontSize: 14\n                        }\n                    }\n                }\n            });\n        } catch (error) {\n            console.error('Error al procesar el payload JSON:', error);\n        }\n    }\n\n    // Llamar a la función de actualización del gráfico cuando se reciba un nuevo mensaje\n    scope.$watch('msg.payload', function(newVal, oldVal) {\n        if (newVal !== undefined) {\n            updateChart3(newVal);\n        }\n    });\n</script>\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1065,
+        "y": 660,
+        "wires": [
+            []
+        ],
+        "l": false
+    },
+    {
+        "id": "1f7e94e4532c65fa",
+        "type": "file in",
+        "z": "2a2cc906a03e0859",
+        "name": "",
+        "filename": "C:\\Users\\Santiago D\\Documents\\Universidad\\2024-1\\Procesos 2\\Proyecto\\JSON\\data.txt",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 785,
+        "y": 680,
+        "wires": [
+            [
+                "af6783201c7b18ab"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "af6783201c7b18ab",
+        "type": "ui_template",
+        "z": "2a2cc906a03e0859",
+        "group": "0e6efa4432b38006",
+        "name": "Correlación",
+        "order": 1,
+        "width": 16,
+        "height": 10,
+        "format": "<script src=\"https://cdn.plot.ly/plotly-latest.min.js\"></script>\n\n<div id=\"correlationPlot\" style=\"width: 100%; height: 400%;\"></div>\n\n<script>\n    // Función para procesar los datos de correlación desde el mensaje (archivo de texto)\n    function processData(payload) {\n        try {\n            // Nombres de las columnas definidas\n            var columnNames = ['Global_reactive_power', 'Global_active_power', 'Voltage', 'Global_intensity', 'Global_apparent_power', 'Power_factor'];\n            \n            // Dividir el payload en líneas\n            var lines = payload.trim().split('\\n');\n\n            // Crear la matriz de correlación\n            var correlationMatrix = [];\n            for (var i = 1; i < lines.length; i++) {\n                var rowData = lines[i].trim().split('\\t');\n                var rowValues = rowData.slice(1).map(parseFloat); // Convertir los valores a números\n                correlationMatrix.push(rowValues);\n            }\n\n            // Configuración del gráfico de matriz de correlación con Plotly.js\n            var plotData = [{\n                z: correlationMatrix,\n                x: columnNames, // Nombres de las columnas como etiquetas del eje x\n                y: columnNames, // Nombres de las columnas como etiquetas del eje y\n                type: 'heatmap',\n                colorscale: 'RdBu', // Esquema de color (caliente a frío)\n                reversescale: false, // No invertir el esquema de color\n                hoverongaps: false,\n                showscale: true,\n                colorbar: {\n                    thickness: 20,\n                    tickformat: '.2f', // Formato de dos decimales para los ticks del colorbar\n                    tickmode: 'array',\n                    ticks: 'inside', // Colocar los ticks dentro del colorbar\n                    tickvals: [-0.5, 0, 0.5, 1], // Valores de los ticks del colorbar\n                    ticktext: ['-0.5', '0', '0.5', '1'] // Textos de los ticks del colorbar\n                },\n                zmin: -0.5, // Valor mínimo de correlación\n                zmax: 1 // Valor máximo de correlación\n            }];\n\n            // Configuración del diseño del gráfico\n            var layout = {\n                title: {\n                    text: 'Diagrama de Correlación Entre Variables',\n                    font: {\n                        size: 20, // Tamaño del título\n                        family: 'Arial, sans-serif', // Fuente del título\n                        color: 'black', // Color del título\n                        weight: 'bold' // Peso del título (negrita)\n                    }\n                },\n                margin: { t: 50, l: 110, r: 50, b: 110 },\n                xaxis: { tickangle: -45 },\n                yaxis: { tickangle: -45 },\n                annotations: [] // Arreglo vacío para almacenar las anotaciones\n            };\n\n            // Configuración del gráfico interactivo con Plotly.js\n            var config = {\n                responsive: true,\n                displayModeBar: false // Desactivar la barra de herramientas de interacción (zoom, mover, etc.)\n            };\n\n            // Agregar anotaciones para mostrar los valores de z dentro de cada celda\n            for (var i = 0; i < plotData[0].y.length; i++) {\n                for (var j = 0; j < plotData[0].x.length; j++) {\n                    var annotation = {\n                        x: plotData[0].x[j],\n                        y: plotData[0].y[i],\n                        text: plotData[0].z[i][j].toFixed(2), // Valor de z formateado a dos decimales\n                        font: { color: 'white' }, // Color del texto de la anotación\n                        showarrow: false\n                    };\n                    layout.annotations.push(annotation);\n                }\n            }\n\n            // Obtener el tamaño del contenedor del nodo ui_template\n            var container = document.getElementById('correlationPlot');\n            var width = container.clientWidth;\n            var height = container.clientHeight;\n\n            // Renderizar el gráfico de correlación con Plotly.js\n            Plotly.newPlot('correlationPlot', plotData, layout, config);\n        } catch (error) {\n            console.error('Error al procesar los datos de correlación:', error);\n        }\n    }\n\n    // Llamar a la función processData cuando se reciba un nuevo mensaje\n    scope.$watch('msg.payload', function(newVal, oldVal) {\n        if (newVal !== undefined) {\n            processData(newVal);\n        }\n    });\n</script>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 950,
+        "y": 700,
+        "wires": [
+            []
         ]
     },
     {
@@ -1221,7 +1767,7 @@
         "height": 1
     },
     {
-        "id": "eb91e01d322b306b",
+        "id": "f3722e39f7c919bd",
         "type": "ui_spacer",
         "z": "2a2cc906a03e0859",
         "name": "spacer",
@@ -1231,7 +1777,7 @@
         "height": 1
     },
     {
-        "id": "bc9bc943059c340d",
+        "id": "a87ad04c10cafe51",
         "type": "ui_spacer",
         "z": "2a2cc906a03e0859",
         "name": "spacer",
@@ -1241,7 +1787,7 @@
         "height": 1
     },
     {
-        "id": "6ad23ada8ca061d4",
+        "id": "4e0c6359f5b47b81",
         "type": "ui_spacer",
         "z": "2a2cc906a03e0859",
         "name": "spacer",
@@ -1251,7 +1797,7 @@
         "height": 1
     },
     {
-        "id": "142f2654264225be",
+        "id": "1aef27fe31bba4b7",
         "type": "ui_spacer",
         "z": "2a2cc906a03e0859",
         "name": "spacer",
@@ -1261,7 +1807,7 @@
         "height": 1
     },
     {
-        "id": "0b3d29fb3abb105e",
+        "id": "9463b53f88a23d3f",
         "type": "ui_spacer",
         "z": "2a2cc906a03e0859",
         "name": "spacer",
@@ -1271,7 +1817,7 @@
         "height": 1
     },
     {
-        "id": "5a1da5a5e41962e9",
+        "id": "dc3bbfb17b8d547b",
         "type": "ui_spacer",
         "z": "2a2cc906a03e0859",
         "name": "spacer",
@@ -1284,7 +1830,7 @@
         "id": "9637394d2b7e86d8",
         "type": "mqtt-broker",
         "name": "",
-        "broker": "localhost",
+        "broker": "broker.emqx.io",
         "port": "1883",
         "clientid": "",
         "autoConnect": true,
@@ -1292,6 +1838,7 @@
         "protocolVersion": "4",
         "keepalive": "60",
         "cleansession": true,
+        "autoUnsubscribe": true,
         "birthTopic": "",
         "birthQos": "0",
         "birthPayload": "",
@@ -1362,6 +1909,39 @@
         "order": 2,
         "disp": false,
         "width": 14,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "264021cecb64e1e7",
+        "type": "ui_group",
+        "name": "Datos de Interes",
+        "tab": "eefbea6e8dbb0b17",
+        "order": 2,
+        "disp": true,
+        "width": 8,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "8c7fce8cfeef3eb1",
+        "type": "ui_group",
+        "name": "Distribucion de Clases",
+        "tab": "eefbea6e8dbb0b17",
+        "order": 3,
+        "disp": true,
+        "width": 24,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "0e6efa4432b38006",
+        "type": "ui_group",
+        "name": "Correlación",
+        "tab": "eefbea6e8dbb0b17",
+        "order": 4,
+        "disp": true,
+        "width": "16",
         "collapse": false,
         "className": ""
     },

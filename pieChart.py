@@ -1,11 +1,11 @@
-from collections import Counter
-import sys, json
 import psycopg2
-import pandas as pd
+import sys, json
 import numpy as np
+import pandas as pd
+from collections import Counter
 
 dates = []; 
-values = ["Date","Time",'Global_reactive_power', 'Global_active_power', 'Voltage', 'Global_intensity', 'Sub_metering_1','Sub_metering_2', 'Sub_metering_3']
+values = ["Date","Time",'Global_active_power', 'Global_reactive_power', 'Voltage', 'Global_intensity', 'Sub_metering_1','Sub_metering_2', 'Sub_metering_3']
 data = eval(sys.argv[1])
 
 route1 = "C:\\Users\\Santiago D\\Documents\\Universidad\\2024-1\\Procesos 2\\Proyecto\\JSON\\pie1.json"
@@ -29,6 +29,7 @@ resultados = cursor.fetchall()
 
 # Convertir los resultados a un DataFrame de Pandas
 df = pd.DataFrame(resultados, columns=values)
+print(df.head())
 
 #select just the columns needed
 df3 = df.loc[:int(len(df)), ['Global_active_power', 'Global_reactive_power', 
@@ -50,19 +51,19 @@ conditions1 = [
     ((S2>0)&(S2<(S3+0.25*S3avg))) | ((S3>0)&(S3<(S2+0.25*S2avg))), #Etiqueta 0:El consumo de ambas zonas es similar
     S2 > (S3+0.25*S3avg), #Etiqueta 1: consumo en zona 2 considerablemente mayor a zona 3
     S3 > (S2+0.25*S2avg), #Etiqueta 2: consumo en zona 3 considerablemente mayor a zona 2
-    (S2 == 0) & (S3==0) #Etiqueta 3: el consumo es despreciable en ambas zonas    
+    (S2 == 0) & (S3==0)   #Etiqueta 3: el consumo es despreciable en ambas zonas    
 ]
 conditions2 = [
     ((S2>0)&(S2<(S1+0.25*S1avg))) | ((S1>0)&(S1<(S2+0.25*S2avg))), #Etiqueta 0:El consumo de ambas zonas es similar
     S2 > (S1+0.25*S1avg), #Etiqueta 1: consumo en zona 2 considerablemente mayor a zona 1
     S1 > (S2+0.25*S2avg), #Etiqueta 2: consumo en zona 1 considerablemente mayor a zona 2
-    (S2 == 0) & (S1==0) #Etiqueta 3: el consumo es despreciable en ambas zonas    
+    (S2 == 0) & (S1==0)   #Etiqueta 3: el consumo es despreciable en ambas zonas    
 ]
 conditions3 = [
     ((S1>0)&(S1<(S3+0.25*S3avg))) | ((S3>0)&(S3<(S1+0.25*S1avg))), #Etiqueta 0:El consumo de ambas zonas es similar
     S1 > (S3+0.25*S3avg), #Etiqueta 1: consumo en zona 1 considerablemente mayor a zona 3
     S3 > (S1+0.25*S1avg), #Etiqueta 2: consumo en zona 3 considerablemente mayor a zona 1
-    (S1 == 0) & (S3==0) #Etiqueta 3: el consumo es despreciable en ambas zonas    
+    (S1 == 0) & (S3==0)   #Etiqueta 3: el consumo es despreciable en ambas zonas    
 ]
     
 choices = [0, 1, 2, 3]
@@ -85,10 +86,10 @@ payload1 = {"labels": ["Z1 > Z2", "Z2 > Z1", "Z1 = Z2"],
            "series":[]}
 payload2 = {"labels": ["Z3 > Z1", "Z1 > Z3", "Z1 = Z3"],
            "data": distribution3,
-           "series":["1","2","3"]}
+           "series":[]}
 payload3 = {"labels": ["Z2 > Z3", "Z3 > Z2", "Z2 = Z3"],
            "data": distribution1,
-           "series":["1","2","3"]}
+           "series":[]}
 
 # Escribir los datos en el archivo JSON
 with open(route1, "w") as json_file:
@@ -97,6 +98,14 @@ with open(route2, "w") as json_file:
     json.dump(payload2, json_file, indent=4)
 with open(route3, "w") as json_file:
     json.dump(payload3, json_file, indent=4)
+
+# Calcular matriz de correlación
+df4 = df3.loc[:int(len(df3)), ['Global_reactive_power', 'Global_active_power',
+                               'Voltage',	'Global_intensity', 'Global_apparent_power', 'Power_factor']]
+
+corr_matrix = df4.corr()
+# Guardar matriz de correlación en un archivo de texto
+corr_matrix.to_csv("C:\\Users\\Santiago D\\Documents\\Universidad\\2024-1\\Procesos 2\\Proyecto\\JSON\\data.txt", sep='\t')
 
 conexion.close()
 cursor.close()
