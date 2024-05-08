@@ -29,7 +29,6 @@ resultados = cursor.fetchall()
 
 # Convertir los resultados a un DataFrame de Pandas
 df = pd.DataFrame(resultados, columns=values)
-print(df.head())
 
 #select just the columns needed
 df3 = df.loc[:int(len(df)), ['Global_active_power', 'Global_reactive_power', 

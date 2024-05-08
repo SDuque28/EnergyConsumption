@@ -1,7 +1,6 @@
 import sys, json
 import psycopg2
 import pandas as pd
-import numpy as np
 
 dates = []; values = []; number = 0
 data = eval(sys.argv[1])
