@@ -35,7 +35,7 @@ df3['Power_factor'] = df3['Global_active_power']/df3['Global_apparent_power']
 # Iterar sobre cada columna del DataFrame
 for columna in df3.columns:
     
-    rounded = df3[columna].round(2)
+    rounded = df3[columna].round(1)
     # Obtener los valores únicos y sus frecuencias
     vc = rounded.value_counts().sort_index()
 
@@ -43,8 +43,8 @@ for columna in df3.columns:
     valores = vc.index.tolist()
     frecuencias = vc.values.tolist()
     # Filtrar los valores y sus sumas de frecuencias para eliminar los valores con frecuencia igual a 1
-    valores_filtrados = [grupo for grupo, suma in zip(valores, frecuencias) if suma > 400]
-    frecuencias_filtradas = [suma for suma in frecuencias if suma > 400]
+    valores_filtrados = [grupo for grupo, suma in zip(valores, frecuencias) if suma > 100]
+    frecuencias_filtradas = [suma for suma in frecuencias if suma > 100]
 
     
     payload = {"labels": valores_filtrados,
